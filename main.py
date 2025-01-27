@@ -22,7 +22,7 @@ def load_configuration(configuration_file_path='user/cfg.yml') -> dict:
 	:return: A dictionary representing the loaded YAML configuration file.
 	:rtype: dict
 	"""
-	with open(configuration_file_path, "r") as configuration_file: 
+        with open(configuration_file_path, "r", encoding='utf-8', errors='ignore') as configuration_file: 
 		config = load(configuration_file)
 		formatting = formatter
 		if config['sensitiveDebug'] == "True":
